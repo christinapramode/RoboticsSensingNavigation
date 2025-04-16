@@ -1,0 +1,6 @@
+<launch>
+  <arg name="port" default="/dev/pts/0"/>
+  <node pkg="gps_driver" type="rtk_driver.py" name="rtk_driver" output="screen">
+  <param name="port" value="$(arg port)"/>
+  </node>
+</launch>
